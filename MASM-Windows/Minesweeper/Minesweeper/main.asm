@@ -1,0 +1,23 @@
+.386
+.model flat, stdcall
+
+ExitProcess PROTO, dwExitCode:DWORD
+CreateWindowA PROTO, lpClassName:DWORD, lpWindowName:DWORD, dwStyle:DWORD, x:DWORD,y:DWORD,nWidth:DWORD,nHeight:DWORD,hWndParent:DWORD,hMenu:DWORD,hInstance:DWORD,lpParam:DWORD
+
+.data
+CLASSNAME BYTE "WINDOW",0Ah,0
+WINNAME BYTE "Minesweeper Window",0Ah,0
+WINSTYLE DWORD 0
+WINX DWORD 0
+WINY DWORD 0
+WINWIDTH DWORD 400
+WINHEIGHT DWORD 600
+
+.code
+
+_main:
+	INVOKE CreateWindowA, OFFSET CLASSNAME, OFFSET WINNAME, WINSTYLE, WINX, WINY, WINWIDTH, WINHEIGHT, 0,0,0,0
+
+	INVOKE ExitProcess,0
+
+End _main
