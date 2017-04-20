@@ -10,9 +10,9 @@
     \subsection{Project Motivation}
     This game is one of my all-time favorite games to play when I have few minutes of free time. I've always wanted to try to build my own copy, and now seems as good of a time as any.
     \section{Design Proposal}
-    The majority of this game is expected to be written in NASM assembly, with possible exception being in the Graphical User Interface, which may end up being written in C++, where the C++ program will listen for events on the GUI, but trigger functions written in Assembly.
+    The majority of this game is expected to be written in MASM assembly, with possible exception being in the Graphical User Interface, which may end up being written in C++, where the C++ program will listen for events on the GUI, but trigger functions written in Assembly.
     \subsection{Design Steps}
-    The following goals will be expected to be built in NASM assembly:
+    The following goals will be expected to be built in MASM assembly:
     \begin{itemize}
     \item Randomly populating mines within a 2D array
     \item Calculating how many mines are adjacent to a given index in 2D array
@@ -21,7 +21,7 @@
     \item Track statistics and win conditions
     \end{itemize}
     \subsection{Design Challenges}
-    The primary challenges of this project, aside from implementing the GUI if it is written in NASM instead of C++, will be manipulating any time values, specifically for generating random indexes to fill the array with mines, and for the timer.
+    The primary challenges of this project, aside from implementing the GUI if it is written in MASM instead of C++, will be manipulating any time values, specifically for generating random indexes to fill the array with mines, and for the timer.
     
 \end{document}
 
