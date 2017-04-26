@@ -1,0 +1,4 @@
+﻿  Board.cpp
+c:\users\torik\desktop\gitrepo\csi370-final\final_c\final_c\board.cpp(84): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+  Final_c.vcxproj -> C:\Users\torik\Desktop\GitRepo\csi370-final\Final_c\Debug\Final_c.exe
+  Final_c.vcxproj -> C:\Users\torik\Desktop\GitRepo\csi370-final\Final_c\Debug\Final_c.pdb (Partial PDB)

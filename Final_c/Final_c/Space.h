@@ -8,6 +8,7 @@
 class Board_Space {
 	public:
 		Board_Space(int, int);
+		Board_Space();
 		~Board_Space();
 		void make_visible();
 		void set_dis_value(int);
@@ -15,6 +16,7 @@ class Board_Space {
 		int get_x();
 		int get_y();
 		int get_data();
+		bool get_bomb();
 	private:
 		int x;
 		int y;

@@ -5,6 +5,10 @@
 #include <time.h>
 #include <iostream>
 
+#include "Board.h"
+#include "Space.h"
+#include "LinkedList.h"
+
 using namespace std;
 /* The goal of this first build is to get the basics of this project running in c++
 */

@@ -8,6 +8,14 @@ Board_Space::Board_Space(int x, int y) {
 	this->hidden = 1;
 }
 
+Board_Space::Board_Space() {
+	this->x = 0;
+	this->y = 0;
+	this->bomb = 0;
+	this->dis_value = 0;
+	this->hidden = 1;
+}
+
 Board_Space::~Board_Space() {
 }
 
@@ -17,6 +25,10 @@ void Board_Space::make_visible() {
 
 void Board_Space::set_dis_value(int value) {
 	this->dis_value = value;
+}
+
+bool Board_Space::get_bomb() {
+	return this->bomb;
 }
 
 void Board_Space::set_bomb() {

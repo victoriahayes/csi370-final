@@ -7,7 +7,7 @@
 using namespace std;
 
 struct Node {
-	Board_Space* space;
+	Board_Space space;
 	Node *next;
 };
 
@@ -16,7 +16,7 @@ class LinkedList {
 		LinkedList();
 		~LinkedList();
 		Node* get_head();
-		void push_space(Board_Space*);
+		void push_space(Board_Space);
 		Board_Space* find_at_location(int, int);
 		void print_list();
 	private:
