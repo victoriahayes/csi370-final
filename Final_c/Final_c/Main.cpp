@@ -87,7 +87,7 @@ LRESULT CALLBACK WndProc(HWND hwnd, UINT msg,
 				for (int j = 0; j < x; j++) {
 					for (int k = 0; k < y; k++) {
 						game_pieces[i] = CreateWindowW(L"Button", L" ", WS_CHILD | WS_VISIBLE,
-							(20 * k), (20 * j), 20, 20, hwnd, (HMENU)i, handle_main, NULL);
+							(20 * j), (20 * k), 20, 20, hwnd, (HMENU)i, handle_main, NULL);
 						i++;
 					}
 				}
@@ -164,8 +164,10 @@ void reveal(int i) {
 	int y = space->get_y();
 	int x = space->get_x();
 	write_mine_values(space, index);
-	space->make_visible();
-	game.shrink_remaining();
+	if (space->get_hidden()) {
+		space->make_visible();
+		game.shrink_remaining();
+	}
 	if (game.get_remaining() == game.get_mines()) {
 		MessageBox(NULL, _T("You Win!"), _T("Minsweeper Final Project"), NULL);
 		PostQuitMessage(0);
@@ -191,7 +193,7 @@ void reveal(int i) {
 			if (x >= 0 && x < game.get_x() && y >= 0 && game.get_y()) {
 				Board_Space* tmp_space = game.find_at_location(x, y);
 				if (tmp_space != nullptr) {
-					if (tmp_space->get_hidden() != 0) {
+					if (tmp_space->get_hidden()) {
 						reveal(tmp_space->get_index());
 					}
 				}
