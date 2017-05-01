@@ -112,12 +112,11 @@
   <ItemGroup>
     <ClInclude Include="Board.h" />
     <ClInclude Include="Header.h" />
-    <ClInclude Include="LinkedList.h" />
+    <ClInclude Include="MajorVars.h" />
     <ClInclude Include="Space.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Board.cpp" />
-    <ClCompile Include="LinkedList.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="Space.cpp" />
   </ItemGroup>

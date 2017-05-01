@@ -1,28 +1,29 @@
 #ifndef _HEADER_H
 #define _HEADER_H
 
-#include <windows.h>
-#include <time.h>
-#include <iostream>
-
 #include "Board.h"
-#include "Space.h"
-#include "LinkedList.h"
+#include "MajorVars.h"
 
 using namespace std;
+
 /* The goal of this first build is to get the basics of this project running in c++
 */
+void destroy_start_screen();
+void reveal(int);
+void write_mine_values(Board_Space* space, int index);
 
-static const int easy_x = 9;
-static const int easy_y = 9;
-static const int easy_mines = 10;
+Board game;
 
-static const int medium_x = 16;
-static const int medium_y = 16;
-static const int medium_mines = 40;
+#define EASY_X 9
+#define EASY_Y 9
+#define EASY_MINES 10
 
-static const int expert_x = 30;
-static const int expert_y = 16;
-static const int expert_mines = 99;
+#define MEDIUM_X 16
+#define MEDIUM_Y 16
+#define MEDIUM_MINES 40
+
+#define EXPERT_X 30
+#define EXPERT_Y 16
+#define EXPERT_MINES 99
 
 #endif //_HEADER_H
