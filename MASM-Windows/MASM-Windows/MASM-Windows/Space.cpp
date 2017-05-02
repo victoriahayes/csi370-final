@@ -87,6 +87,8 @@ bool Board_Space::get_hidden() {
 }
 
 int Board_Space::get_data() {
+	// return -1 if the space is a bomb,
+	// otherwise returns the number of bombs neighboring the space
 	__asm { mov eax, dword ptr[this]
 		mov cl, byte ptr[eax + 18]
 		mov dl, 0
